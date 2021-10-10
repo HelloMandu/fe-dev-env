@@ -1,0 +1,5 @@
+$backgroundImage: "img.jpg";
+
+body{
+    background-image: url($backgroundImage);
+}
