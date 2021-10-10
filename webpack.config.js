@@ -16,14 +16,15 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.js/,
-      //   use: path.resolve('./my-webpack-loader.js')
-      // },
       {
-        test: /\.css/,
+        test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]
-      }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader", // 바벨 로더를 추가한다
+      },
     ]
   },
   plugins: [
